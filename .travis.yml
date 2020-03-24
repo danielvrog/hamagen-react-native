@@ -1,0 +1,25 @@
+dist: bionic
+language: node_js
+node_js: 13
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+stages:
+  - name: test
+  - name: analysis
+
+jobs:
+  include:
+  - stage: test
+    script: npm test -- --coverage
+
+  - stage: analysis
+    script: npm test -- --coverage && npm run lint -- -f json -o reports/eslint.json && npx gulp sonar
+    name: sonar
+    addons:
+      sonarcloud:
+        organization: danielvrog
+        token: "$SONAR_TOKEN"
