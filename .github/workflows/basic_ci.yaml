@@ -6,7 +6,7 @@ jobs:
   run-linters:
     name: Run linters
     runs-on: ubuntu-latest
-
+    timeout-minutes: 5
     steps:
       - name: Check out Git repository
         uses: actions/checkout@v2
@@ -30,7 +30,9 @@ jobs:
 
   install-and-test:
     name: Install and test
+    needs: run-linters
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps: 
       - uses: actions/checkout@v2
       - name: Install npm dependencies
