@@ -1,3 +1,5 @@
+![](https://github.com/danielvrog/hamagen-react-native/workflows/.github/workflows/basic_ci.yaml/badge.svg)
+
 # Hamagen
 
 Israel's Ministry of Health's COVID-19 exposure prevention app.
