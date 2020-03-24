@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/danielvrog/hamagen-react-native.svg?branch=master)](https://travis-ci.com/danielvrog/hamagen-react-native)
+
 # Hamagen
 
 Israel's Ministry of Health's COVID-19 exposure prevention app.
