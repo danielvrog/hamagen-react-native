@@ -8,18 +8,29 @@ cache:
     - "node_modules"
 
 stages:
+  - name: install
   - name: lint
   - name: test
   - name: analysis
     if: branch = master
-    
+
+
+
 jobs:
   include:
+
+  - stage: install
+    script: npm install --package-lock
+
   - stage: test
+    install:
+      - npm ci
     script: npm test -- --coverage
 
   - stage: lint
-    script: npm run lint -- -f json -o reports/eslint.json
+    install:
+      - npm ci
+    script: npm lint -- -f json -o reports/eslint.json
 
   - stage: analysis
     script: npx gulp sonar
