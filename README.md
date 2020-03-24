@@ -1,4 +1,5 @@
 ![](https://github.com/danielvrog/hamagen-react-native/workflows/.github/workflows/basic_ci.yaml/badge.svg)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=danielvrog_hamagen-react-native&metric=alert_status)](https://sonarcloud.io/dashboard?id=danielvrog_hamagen-react-native)
 
 # Hamagen
 
